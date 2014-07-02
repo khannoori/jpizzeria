@@ -1,0 +1,99 @@
+@CHARSET "ISO-8859-1";
+
+div.art-fieldset-container {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+div.art-item-image, div.art-item-details {
+	float: left;
+	padding: 0px 5px 0px 0px;
+}
+
+div.art-item-sp, div.art-item-price {
+	float: right
+}
+
+div.art-item-image {
+	width: 120px;
+	height: 120px;
+	padding-right: 10px;
+}
+
+div.art-item-details {
+	max-width: 200px;
+}
+
+div.art-item-sp {
+	padding: 0px 5px 0px 5px;
+	min-width: 210px;
+	vertical-align: top;
+}
+
+div.art-item-price, 
+div.art-item-price-single {
+	padding: 0px 0px 0px 10px;
+	min-width: 70px;
+	font-weight: bold;
+}
+div.art-item-price-single {
+	margin: 1em 0 1em 2em;
+	float: right;
+}
+
+div.art-item-content {
+	padding-top: 5px;
+	font-weight: bold;
+}
+
+div.art-item-description {
+	padding-top: 5px;
+	font-size: x-small;
+}
+
+img.art-item-img {
+	border: none;
+	width: 120px;
+	height: 120px;
+}
+
+/* Reviews */
+div.art-opinions-container {
+	margin: 5px 5px 5px 5px;
+	min-width: 545px;
+	max-width: 545px;
+}
+
+body.contentpane {
+	padding: 0;
+	margin: 0;
+	color: #000000;
+	background-color: #FCD19B;
+	min-width: 580px;
+}
+
+fieldset.art-opinion-fieldset {
+	max-width: 540px;
+}
+
+div.art-opinion-form {
+	margin-left: 5px;
+	margin-right: 5px;
+	min-width: 545px;
+}
+
+div.art-opinion-date {
+	padding-top: 3px;
+	padding-bottom: 10px;
+	font-size: smaller;
+}
+
+div.art-opinions-box {
+	padding-bottom: 5px;
+	max-width: 530px;	
+}
+
+div.art-opinions-btns {
+	text-align: right;
+	max-width: 530px;
+}

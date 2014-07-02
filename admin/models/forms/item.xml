@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details"
+		addfieldpath="/administrator/components/com_pizza/models/fields"
+		>
+		<field 
+			name="id"  
+			type="text" 
+			class="readonly" 
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description ="JGLOBAL_FIELD_ID_DESC" 
+			size="10" 
+			default="0"
+			readonly="true"
+			/>
+
+		<field 
+			name="number" 
+			type="text" 
+			label="COM_PIZZA_FIELD_NUMBER_LABEL"
+			description="COM_PIZZA_FIELD_ITEM_NUMBER_DESC" 
+			class="inputbox" 
+			size="5"
+			maxlength="5"
+		/>
+
+		<field 
+			name="name" 
+			type="text" 
+			label="COM_PIZZA_FIELD_NAME_LABEL"
+			description="COM_PIZZA_FIELD_ITEM_NAME_DESC" 
+			class="inputbox" 
+			size="30" 
+		/>
+		
+		<field 
+			name="description" 
+			type="textarea" 
+			class="inputbox"
+			label="COM_PIZZA_FIELD_DESCRIPTION_LABEL" 
+			description="COM_PIZZA_FIELD_ITEM_DESCRIPTION_DESC"
+			rows="6"
+			cols="70" 
+			/>
+
+		<field 
+			name="state" 
+			type="list" 
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC" 
+			class="inputbox"
+			filter="intval" 
+			size="1" 
+			default="1"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field 
+			name="catid" 
+			type="category" 
+			extension="com_pizza"
+			label="JCATEGORY" 
+			description="JFIELD_CATEGORY_DESC"
+			class="inputbox" 
+			required="true"
+		>
+		</field>
+
+		<field 
+			name="featured" 
+			type="list"
+			label="JFEATURED"
+			description="COM_PIZZA_FIELD_ITEM_FEATURED_DESC"
+			default="0"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field 
+			name="image" 
+			type="media" 
+			directory="pizza"
+			hide_none="1" 
+			label="COM_PIZZA_FIELD_IMAGE_LABEL"
+			size="40"
+			description="COM_PIZZA_FIELD_ITEM_IMAGE_DESC" 
+			/>
+
+		<field 
+			name="content"
+			type="itemcontents"
+			label="COM_PIZZA_FIELD_CONTENTS_LABEL"
+			description="COM_PIZZA_FIELD_ITEM_CONTENTS_DESC"
+			/>
+			
+		<field 
+			name="prices"
+			type="itemprices"
+			label="COM_PIZZA_FIELD_PRICES_LABEL"
+			description="COM_PIZZA_FIELD_ITEM_PRICES_DESC"
+			/>			
+	</fieldset>
+</form>

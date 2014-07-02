@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6" method="upgrade">
+ 
+	<name>com_pizza</name>
+	<creationDate>December 2011</creationDate>
+	<author>Ismail Faizi</author>
+	<authorEmail>kanafghan@gmail.com</authorEmail>
+	<authorUrl>www.hamwatanet.com</authorUrl>
+	<copyright>Copyright 2012 - all rights are reservered by the author.</copyright>
+	<license>GNU/Public License</license>
+	<version>1.2</version>
+	<description>COM_PIZZA_COMP_DESC</description>
+ 
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<installfile>install.php</installfile>	
+	<uninstallfile>uninstall.php</uninstallfile> 
+	
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>pizza.php</filename>
+		<filename>controller.php</filename>
+		<!-- Component public models -->		
+		<folder>models</folder>
+		<!-- Component public views -->
+		<folder>views</folder>
+		<!-- Component public controllers -->
+		<folder>controllers</folder>
+		<!-- Component site helpers -->
+		<folder>helpers</folder>
+		<!-- Component public languages -->
+		<folder>language</folder>
+		<!-- Component public modules (installed latter) -->
+		<folder>modules</folder>
+	</files>
+ 
+ 	<media destination="com_pizza" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
+	
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu>COM_PIZZA_ADMIN_MENU</menu>
+		<submenu>
+			<menu link="option=com_pizza&amp;view=items"
+				view="itemss">COM_PIZZA_ITEMS</menu>
+			<menu link="option=com_pizza&amp;view=toppings"
+				view="toppings">COM_PIZZA_TOPPINGS</menu>				
+			<menu link="option=com_categories&amp;extension=com_pizza"
+				view="categories">COM_PIZZA_CATEGORIES</menu>
+			<menu link="option=com_pizza&amp;view=size"
+				view="size">COM_PIZZA_SIZES</menu>
+			<!-- 					
+			<menu link="option=com_pizza&amp;view=orders"
+				view="categories">COM_PIZZA_ORDERS</menu>	
+			 -->	
+		</submenu>
+		<!-- Administration Main File Copy Section -->
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>pizza.php</filename>
+			<filename>controller.php</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+			<!-- Component helper classes -->
+			<folder>helpers</folder>
+			<!-- Component admin. models -->
+			<folder>models</folder>
+			<!-- Component admin. views -->
+			<folder>views</folder>
+			<!-- Component admin. controllers -->
+			<folder>controllers</folder>
+			<!-- tables files section -->
+			<folder>tables</folder>
+			<!-- component back-end languages -->
+			<folder>language</folder>
+		</files>
+	</administration>
+</extension>

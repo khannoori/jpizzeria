@@ -1,0 +1,45 @@
+@CHARSET "ISO-8859-1";
+
+/* Menucard */
+.menucard-module li h1,
+.menucard-module li h1 a, 
+.menucard-module li h1 a:link, 
+.menucard-module li h1 a:hover, 
+.menucard-module li h1 a:visited {
+	font-size: 15px;	
+}
+.menucard-module li h2,
+.menucard-module li h2 a, 
+.menucard-module li h2 a:link, 
+.menucard-module li h2 a:hover, 
+.menucard-module li h2 a:visited {
+	font-size: 14px;
+}
+.menucard-module li h3,
+.menucard-module li h3 a, 
+.menucard-module li h3 a:link, 
+.menucard-module li h3 a:hover, 
+.menucard-module li h3 a:visited {
+	font-size: 13px;
+}
+.menucard-module li h4,
+.menucard-module li h4 a, 
+.menucard-module li h4 a:link, 
+.menucard-module li h4 a:hover, 
+.menucard-module li h4 a:visited {
+	font-size: 12px;
+}
+.menucard-module li h5,
+.menucard-module li h5 a, 
+.menucard-module li h5 a:link, 
+.menucard-module li h5 a:hover, 
+.menucard-module li h5 a:visited {
+	font-size: 11px;
+}
+.menucard-module li h6,
+.menucard-module li h6 a, 
+.menucard-module li h6 a:link, 
+.menucard-module li h6 a:hover, 
+.menucard-module li h6 a:visited {
+	font-size: 10px;
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field 
+			name="id"  
+			type="text" 
+			class="readonly" 
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description ="JGLOBAL_FIELD_ID_DESC" 
+			size="10" 
+			default="0"
+			readonly="true"
+			/>
+
+		<field 
+			name="name" 
+			type="text" 
+			label="COM_PIZZA_FIELD_NAME_LABEL"
+			description="COM_PIZZA_FIELD_TOPPING_NAME_DESC" 
+			class="inputbox" 
+			size="30" 
+			required="true"
+		/>
+		
+		<field 
+			name="extra" 
+			type="list"
+			label="COM_PIZZA_FIELD_EXTRA_LABEL"
+			description="COM_PIZZA_FIELD_TOPPING_EXTRA_DESC"
+			default="0"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field 
+			name="type_id"
+			type="sql"
+			default="1"
+			label="COM_PIZZA_FIELD_TYPEID_LABEL"
+			description="COM_PIZZA_FIELD_TOPPING_TYPEID_DESC"
+			query="SELECT id, name FROM #__pizza_topping_types"
+			key_field="id"
+			value_field="name"
+			required="true"
+		/>
+	</fieldset>
+</form>

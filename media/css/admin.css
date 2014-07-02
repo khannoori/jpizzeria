@@ -1,0 +1,29 @@
+@CHARSET "ISO-8859-1";
+
+.ajax-message, .ajax-message-error {
+	padding: 10px 15px 10px 25px;		
+	font-size: small;
+	font-weight: 800;
+}
+
+.ajax-message {
+	border-top: 2px solid #55F;
+	border-bottom: 2px solid #55F;
+	background-color: #AAAAFF;
+	color: #5555F5;
+}
+
+.ajax-message-error {
+	border-top: 2px solid #A55;
+	border-bottom: 2px solid #A55;
+	background-color: #FA9595;
+	color: #EF2525; 
+}
+
+.icon-32-prices {
+	background-image: url("../images/icon-32-prices.png");
+}
+
+.remove-button, .edit-button {
+	cursor: pointer;
+}

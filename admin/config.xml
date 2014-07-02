@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="item"
+		label="COM_PIZZA_CONFIG_ITEM_SETTINGS_LABEL"
+		description="COM_PIZZA_CONFIG_ITEM_SETTINGS_DESC">
+
+		<field
+			name="ratings" 
+			type="radio"
+			label="COM_PIZZA_CONFIG_FIELD_RATINGS_LABEL"
+			description="COM_PIZZA_CONFIG_FIELD_RATINGS_DESC"
+			default="1">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		<field
+			name="reviews" 
+			type="radio"
+			label="COM_PIZZA_CONFIG_FIELD_REVIEWS_LABEL"
+			description="COM_PIZZA_CONFIG_FIELD_REVIEWS_DESC"
+			default="1">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+	</fieldset>
+
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="com_content"
+			section="component" />
+	</fieldset>
+</config>

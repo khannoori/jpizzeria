@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="com.joomla.ext.pizza" default="copy_all" basedir=".">
+	<property name="a"   value="./admin" />
+	<property name="m"   value="./media" />
+	<property name="s"   value="./site" />
+	<property name="ta"  value="../com.joomla.dev.pizza/administrator/components" />
+	<property name="tm"  value="../com.joomla.dev.pizza/media/com_pizza" />
+	<property name="ts"  value="../com.joomla.dev.pizza/components" />
+	<property name="sm" value="./site/modules"/>
+	<property name="tsm" value="../com.joomla.dev.pizza/modules"/>
+	<target name="copy_all" description="Copying files to test project.">
+		<echo message="Running build.xml. Copying files from dev to test..." />
+		
+		<!-- ========================= ADMIN FILES ========================= -->
+		<echo message="Copying admin files..." />
+		<copy file="${a}/pizza.php" todir="${ta}/com_pizza"/>
+		<copy file="${a}/controller.php" todir="${ta}/com_pizza"/>
+		<copy file="${a}/access.xml" todir="${ta}/com_pizza"/>
+		<copy file="${a}/config.xml" todir="${ta}/com_pizza"/>
+				
+		<echo message="Copying admin Controllers..." />
+		<copy file="${a}/controllers/item.php" todir="${ta}/com_pizza/controllers"/>
+		<copy file="${a}/controllers/items.php" todir="${ta}/com_pizza/controllers"/>
+		<copy file="${a}/controllers/topping.php" todir="${ta}/com_pizza/controllers"/>
+		<copy file="${a}/controllers/toppings.php" todir="${ta}/com_pizza/controllers"/>		
+		<copy file="${a}/controllers/migrator.php" todir="${ta}/com_pizza/controllers"/>
+		<copy file="${a}/controllers/type.php" todir="${ta}/com_pizza/controllers"/>
+		<copy file="${a}/controllers/size.php" todir="${ta}/com_pizza/controllers"/>
+		<copy file="${a}/controllers/prices.php" todir="${ta}/com_pizza/controllers"/>
+			
+		<echo message="Copying admin Helpers..." />
+		<copy file="${a}/helpers/pizza.php" todir="${ta}/com_pizza/helpers"/>		
+		<copy file="${a}/helpers/html/pizzaadministrator.php" todir="${ta}/com_pizza/helpers/html"/>		
+		
+		<echo message="Copying admin languages..." />
+		<copy file="${a}/language/en-GB/en-GB.com_pizza.ini" todir="${ta}/com_pizza/language/en-GB"/>
+		<copy file="${a}/language/da-DK/da-DK.com_pizza.ini" todir="${ta}/com_pizza/language/da-DK"/>
+		
+		<echo message="Copying admin Models..." />
+		<copy file="${a}/models/review.php" todir="${ta}/com_pizza/models"/>
+		<copy file="${a}/models/item.php" todir="${ta}/com_pizza/models"/>
+		<copy file="${a}/models/items.php" todir="${ta}/com_pizza/models"/>
+		<copy file="${a}/models/topping.php" todir="${ta}/com_pizza/models"/>
+		<copy file="${a}/models/toppings.php" todir="${ta}/com_pizza/models"/>		
+		<copy file="${a}/models/type.php" todir="${ta}/com_pizza/models"/>
+		<copy file="${a}/models/size.php" todir="${ta}/com_pizza/models"/>		
+		<copy file="${a}/models/prices.php" todir="${ta}/com_pizza/models"/>		
+		<echo message="Copying admin models forms..." />
+		<copy file="${a}/models/forms/item.xml" todir="${ta}/com_pizza/models/forms"/>
+		<copy file="${a}/models/forms/topping.xml" todir="${ta}/com_pizza/models/forms"/>
+		<copy file="${a}/models/forms/type.xml" todir="${ta}/com_pizza/models/forms"/>
+		<copy file="${a}/models/forms/size.xml" todir="${ta}/com_pizza/models/forms"/>
+		<echo message="Copying admin models fields..." />
+		<copy file="${a}/models/fields/itemcontents.php" todir="${ta}/com_pizza/models/fields"/>
+		<copy file="${a}/models/fields/itemprices.php" todir="${ta}/com_pizza/models/fields"/>
+		
+		<echo message="Copying admin tables..." />
+		<copy file="${a}/tables/items.php" todir="${ta}/com_pizza/tables"/>
+		<copy file="${a}/tables/reviews.php" todir="${ta}/com_pizza/tables"/>
+		<copy file="${a}/tables/orders.php" todir="${ta}/com_pizza/tables"/>
+		<copy file="${a}/tables/ratings.php" todir="${ta}/com_pizza/tables"/>
+		<copy file="${a}/tables/sizes.php" todir="${ta}/com_pizza/tables"/>
+		<copy file="${a}/tables/toppings.php" todir="${ta}/com_pizza/tables"/>
+		<copy file="${a}/tables/types.php" todir="${ta}/com_pizza/tables"/>
+		
+		<echo message="Copying admin Views..." />
+		<echo message="Copying admin items view..." />
+		<copy file="${a}/views/items/view.html.php" todir="${ta}/com_pizza/views/items"/>
+		<copy file="${a}/views/items/tmpl/default.php" todir="${ta}/com_pizza/views/items/tmpl"/>
+		<copy file="${a}/views/items/tmpl/default_head.php" todir="${ta}/com_pizza/views/items/tmpl"/>
+		<copy file="${a}/views/items/tmpl/default_body.php" todir="${ta}/com_pizza/views/items/tmpl"/>
+		<copy file="${a}/views/items/tmpl/default_foot.php" todir="${ta}/com_pizza/views/items/tmpl"/>
+		<echo message="Copying admin item view..." />
+		<copy file="${a}/views/item/view.html.php" todir="${ta}/com_pizza/views/item"/>
+		<copy file="${a}/views/item/view.ajax.php" todir="${ta}/com_pizza/views/item"/>
+		<copy file="${a}/views/item/tmpl/edit.php" todir="${ta}/com_pizza/views/item/tmpl"/>
+		<echo message="Copying admin toppings view..." />
+		<copy file="${a}/views/toppings/view.html.php" todir="${ta}/com_pizza/views/toppings"/>
+		<copy file="${a}/views/toppings/tmpl/default.php" todir="${ta}/com_pizza/views/toppings/tmpl"/>
+		<copy file="${a}/views/toppings/tmpl/default_head.php" todir="${ta}/com_pizza/views/toppings/tmpl"/>
+		<copy file="${a}/views/toppings/tmpl/default_body.php" todir="${ta}/com_pizza/views/toppings/tmpl"/>
+		<copy file="${a}/views/toppings/tmpl/default_foot.php" todir="${ta}/com_pizza/views/toppings/tmpl"/>
+		<echo message="Copying admin topping view..." />
+		<copy file="${a}/views/topping/view.html.php" todir="${ta}/com_pizza/views/topping"/>
+		<copy file="${a}/views/topping/tmpl/edit.php" todir="${ta}/com_pizza/views/topping/tmpl"/>
+		<echo message="Copying admin type view..." />
+		<copy file="${a}/views/type/view.html.php" todir="${ta}/com_pizza/views/type"/>
+		<copy file="${a}/views/type/tmpl/edit.php" todir="${ta}/com_pizza/views/type/tmpl"/>		
+		<echo message="Copying admin size view..." />
+		<copy file="${a}/views/size/view.html.php" todir="${ta}/com_pizza/views/size"/>
+		<copy file="${a}/views/size/view.ajax.php" todir="${ta}/com_pizza/views/size"/>
+		<copy file="${a}/views/size/tmpl/default.php" todir="${ta}/com_pizza/views/size/tmpl"/>		
+		<echo message="Copying admin prices view..." />
+		<copy file="${a}/views/prices/view.html.php" todir="${ta}/com_pizza/views/prices"/>
+		<copy file="${a}/views/prices/view.ajax.php" todir="${ta}/com_pizza/views/prices"/>
+		<copy file="${a}/views/prices/tmpl/default.php" todir="${ta}/com_pizza/views/prices/tmpl"/>		
+				
+		<!-- ========================= MEDIA FILES ========================= -->
+		<echo message="Copying site media files..." />
+		<copy file="${m}/images/icon-32-prices.png" todir="${tm}/images"/>
+		<copy file="${m}/images/btn-remove.png" todir="${tm}/images"/>
+		<copy file="${m}/images/btn-edit.png" todir="${tm}/images"/>
+		<echo message="Copying CSS files..." />
+		<copy file="${m}/css/site.css" todir="${tm}/css"/>
+		<copy file="${m}/css/admin.css" todir="${tm}/css"/>	
+		<echo message="Copying site JavaScripts..." />
+		<copy file="${m}/js/moostarrating.js" todir="${tm}/js"/>
+		<copy file="${m}/js/ratinghandler.js" todir="${tm}/js"/>
+		<copy file="${m}/js/backendajax.js" todir="${tm}/js"/>
+		
+		<!-- ========================= SITE FILES ========================= -->
+		<echo message="Copying site Controllers..." />
+		<copy file="${s}/controllers/item.php" todir="${ts}/com_pizza/controllers"/>
+		<copy file="${s}/controllers/opinion.php" todir="${ts}/com_pizza/controllers"/>
+		<copy file="${s}/controllers/cnc.php" todir="${ts}/com_pizza/controllers"/>		
+		
+		<echo message="Copying site Models..." />
+		<copy file="${s}/models/pizza.php" todir="${ts}/com_pizza/models"/>
+		<copy file="${s}/models/item.php" todir="${ts}/com_pizza/models"/>
+		<copy file="${s}/models/items.php" todir="${ts}/com_pizza/models"/>
+		<copy file="${s}/models/opinions.php" todir="${ts}/com_pizza/models"/>
+		<copy file="${s}/models/cncs.php" todir="${ts}/com_pizza/models"/>
+		
+		<echo message="Copying site Views..." />
+		<echo message="Copying view pizza..." />
+		<copy file="${s}/views/pizza/view.html.php" todir="${ts}/com_pizza/views/pizza"/>
+		<copy file="${s}/views/pizza/tmpl/default.php" todir="${ts}/com_pizza/views/pizza/tmpl"/>
+		<copy file="${s}/views/pizza/tmpl/default.xml" todir="${ts}/com_pizza/views/pizza/tmpl"/>
+		<echo message="Copying view items..." />
+		<copy file="${s}/views/items/view.html.php" todir="${ts}/com_pizza/views/items"/>
+		<copy file="${s}/views/items/view.ajax.php" todir="${ts}/com_pizza/views/items"/>
+		<copy file="${s}/views/items/tmpl/default.php" todir="${ts}/com_pizza/views/items/tmpl"/>
+		<echo message="Copying view opinions..." />
+		<copy file="${s}/views/opinions/view.html.php" todir="${ts}/com_pizza/views/opinions"/>
+		<copy file="${s}/views/opinions/tmpl/modal.php" todir="${ts}/com_pizza/views/opinions/tmpl"/>
+		<echo message="Copying view cncs..." />
+		<copy file="${s}/views/cncs/view.html.php" todir="${ts}/com_pizza/views/cncs"/>
+		<copy file="${s}/views/cncs/tmpl/default.php" todir="${ts}/com_pizza/views/cncs/tmpl"/>
+		<copy file="${s}/views/cncs/tmpl/default.xml" todir="${ts}/com_pizza/views/cncs/tmpl"/>
+		<echo message="Copying view owncncs..." />
+		<copy file="${s}/views/owncncs/view.html.php" todir="${ts}/com_pizza/views/owncncs"/>
+		<copy file="${s}/views/owncncs/tmpl/default.php" todir="${ts}/com_pizza/views/owncncs/tmpl"/>
+		<copy file="${s}/views/owncncs/tmpl/default.xml" todir="${ts}/com_pizza/views/owncncs/tmpl"/>
+		<echo message="Copying view close..." />
+		<copy file="${s}/views/close/view.html.php" todir="${ts}/com_pizza/views/close"/>
+		
+		<echo message="Copying site helper files..." />
+		<copy file="${s}/helpers/pizza.php" todir="${ts}/com_pizza/helpers"/>
+		<copy file="${s}/helpers/items.php" todir="${ts}/com_pizza/helpers"/>
+		<copy file="${s}/helpers/category.php" todir="${ts}/com_pizza/helpers"/>
+		
+		<echo message="Copying site language file..." />
+		<copy file="${s}/language/da-DK/da-DK.com_pizza.ini" todir="../com.joomla.dev.16/language/da-DK"/>
+		
+		<echo message="Copying site files.." />
+		<copy file="${s}/controller.php" todir="${ts}/com_pizza/"/>
+		<copy file="${s}/pizza.php" todir="${ts}/com_pizza/"/>
+		
+		<!-- ======================== MODULES FILES ======================== -->
+		<echo message="Copying Modules..."/>
+		<echo message="Copying Menucard Module..."/>
+		<copy file="${sm}/mod_pizza_menucard/mod_pizza_menucard.php" todir="${tsm}/mod_pizza_menucard"/>
+		<copy file="${sm}/mod_pizza_menucard/tmpl/default_items.php" todir="${tsm}/mod_pizza_menucard/tmpl"/>
+		<echo message="Copying Order List Module..."/>
+		<copy file="${sm}/mod_pizza_orderlist/mod_pizza_orderlist.php" todir="${tsm}/mod_pizza_orderlist"/>
+		<copy file="${sm}/mod_pizza_orderlist/helper.php" todir="${tsm}/mod_pizza_orderlist"/>
+		<copy file="${sm}/mod_pizza_orderlist/tmpl/default.php" todir="${tsm}/mod_pizza_orderlist/tmpl"/>
+		
+	</target>
+</project>
