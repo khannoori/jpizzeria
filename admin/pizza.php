@@ -2,6 +2,8 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
+echo "Hej Khan!!!!!";
+
 // Allow access only to special users
 if (!JFactory::getUser()->authorise('core.manage', 'com_pizza'))
 {
