@@ -150,7 +150,7 @@
 		<copy file="${s}/helpers/category.php" todir="${ts}/com_pizza/helpers"/>
 		
 		<echo message="Copying site language file..." />
-		<copy file="${s}/language/da-DK/da-DK.com_pizza.ini" todir="../com.joomla.dev.16/language/da-DK"/>
+		<copy file="${s}/language/da-DK/da-DK.com_pizza.ini" todir="${ts}/language/da-DK"/>
 		
 		<echo message="Copying site files.." />
 		<copy file="${s}/controller.php" todir="${ts}/com_pizza/"/>
